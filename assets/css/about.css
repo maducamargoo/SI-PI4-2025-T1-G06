@@ -1,0 +1,75 @@
+/* === SEÇÃO ABOUT - ajuste para imagem com tamanho parecido ao INÍCIO === */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 5% 80px;
+    /* remova min-height:100vh se quiser que a altura acompanhe o conteúdo */
+  }
+  
+  /* Faz a imagem ocupar cerca de 30-40% e o texto o restante */
+#about_img {
+    flex: 0 0 40%; /* largura fixa relativa (40% do contêiner) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  /* limita a imagem do banner — igual ao #cta_banner do início */
+#about_img img {
+    max-width: 600px;   /* mesma referência do início */
+    height: auto;       /* mantém proporção correta */
+    max-height: 480px;  /* ainda limita por altura se necessário */
+    object-fit: cover;
+    border-radius: 20px;
+}
+  
+/* Texto à direita ocupando o resto */
+.about_text {
+  flex: 1; /* ocupa o espaço restante */
+  color: var(--cor-preto);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li{
+  margin-top: 30px;
+}
+
+.text_matcha{
+  color: var(--cor-matcha);
+}
+
+.text_tangerine{
+  color: var(--cor-tangerine);
+}
+
+
+.grifa_blush, .grifa_matcha, .grifa_sea, .grifa_tangerine {
+  border-radius: 5px;
+  padding: 1px 5px;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  font-style: oblique;
+}
+
+.grifa_sea{
+  background-color: var(--cor-sea);
+}
+
+.grifa_tangerine{
+  background-color: var(--cor-tangerine);
+}
+
+.grifa_blush{
+  background-color: var(--cor-blush);
+}
+
+.grifa_matcha{
+  background-color: var(--cor-matcha);
+}

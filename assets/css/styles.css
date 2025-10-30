@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --cor-fundo: #fdf6ec;
+    --cor-cabecalho: #fcedd6;
+    --cor-tangerine: #f08c21;
+    --cor-butter: #f2d88f;
+    --cor-sea: #6698cc;
+    --cor-blush: #e36888;
+    --cor-matcha: #b4b534;
+    --cor-preto: #000;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
