@@ -16,10 +16,13 @@
     --cor-blush: #e36888;
     --cor-matcha: #b4b534;
     --cor-preto: #000;
+    --cor-musgo: #8e9f4c;
+    --cor-marrom: #583c2e;
+    --cor-link: #666F88;
 }
 
 body{
     height: 100vh;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-musgo);
+    font-family: 'Rubik', sans-serif;
 }
-

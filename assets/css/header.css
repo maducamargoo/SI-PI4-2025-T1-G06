@@ -27,10 +27,10 @@ nav .nav-bar{
 }
 
 nav .nav-bar .logo a{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
-    color: #66974a;
-    text-decoration: none;
+    color: #F2055C;
+    text-decoration:none;
 }
 
 .nav-bar .nav-links{

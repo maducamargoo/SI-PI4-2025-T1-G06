@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RimaJam - Cadastro</title>
+
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/cadastro.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo-area-cadastro">
+                <img src="../assets/img/logo.png" alt="Logo RimaJam">
+            </div>
+            
+            <div class="card-form">
+                <h2>Cadastro</h2>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="nomeEscola">Nome da Escola</label>
+                        <input type="text" id="nomeEscola" name="nomeEscola" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuarioEscola">Crie um usuário para escola</label>
+                        <input type="text" id="usuarioEscola" name="usuarioEscola" placeholder="Ex: colegio-alfa" required>
+                    </div>
+                    
+                    <div class="rules-group">
+                        <p>Para criar seu usuário:</p>
+                        <ul class="rules-list">
+                            <li><span class="icon">💡</span> Não utilize espaços, use um traço (-) ou underline (_)</li>
+                            <li><span class="icon">💡</span> Mínimo de 5 caracteres</li>
+                            <li><span class="icon">💡</span> Evite caracteres especiais, como $, #, %, @, !</li>
+                            <li><span class="icon">💡</span> Use apenas letras minúsculas (a-z) e números (0-9)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailEscola">E-mail da Escola</label>
+                        <input type="email" id="emailEscola" name="emailEscola" required>
+                    </div>
+                    
+                    <div class="form-group password-group">
+                        <label for="senhaEscola">Nova Senha</label>
+                        <input type="password" id="senhaEscola" name="senhaEscola" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmaSenha">Confirme sua senha</label>
+                        <input type="password" id="confirmaSenha" name="confirmaSenha" required>
+                    </div>
+                    
+                    <div class="plan-group">
+                        <p>Escolha seu plano</p>
+                        
+                        <label class="plan-option">
+                            <input type="radio" name="plano" value="mensal" required>
+                            <div class="plan-box">
+                                <h4>Mensal</h4>
+                                <span class="price">R$ 99,99/mês</span>
+                            </div>
+                        </label>
+
+                        <label class="plan-option">
+                            <input type="radio" name="plano" value="semestral">
+                            <div class="plan-box">
+                                <h4>Semestral</h4>
+                                <span class="price">R$ 69,99/mês</span>
+                            </div>
+                        </label>
+
+                        <label class="plan-option">
+                            <input type="radio" name="plano" value="anual">
+                            <div class="plan-box">
+                                <h4>Anual</h4>
+                                <span class="price">R$ 49,99/mês</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-group">
+    <p>Dados do Cartão de Crédito</p>
+
+    <div class="form-group">
+        <label for="numeroCartao">Número do Cartão</label>
+        <input type="text" id="numeroCartao" name="numeroCartao" maxlength="19" placeholder="1234 5678 9123 4567" required>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="validadeCartao">Validade (MM/AA)</label>
+            <input type="text" id="validadeCartao" name="validadeCartao" maxlength="5" placeholder="10/29" required>
+        </div>
+
+        <div class="form-group half">
+            <label for="cvvCartao">CVV</label>
+            <input type="password" id="cvvCartao" name="cvvCartao" maxlength="4" placeholder="123" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="nomeCartao">Nome Impresso no Cartão</label>
+        <input type="text" id="nomeCartao" name="nomeCartao" placeholder="Como está no cartão" required>
+    </div>
+    </div>
+    
+    
+    
+    
+    <button type="submit" class="login-button">
+        Continuar
+    </button>
+        
+        <a href="login.html" class="link">Sou cadastrado</a>
+    </form>
+    </div>
+
+        <div class="card-image-cadastro">
+    <img src="../assets/img/professora.png" alt="Professora lendo um livro para crianças"> 
+</div>
+</div>
+</div>
+</body>
+</html>
