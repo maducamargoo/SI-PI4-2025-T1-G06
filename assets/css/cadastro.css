@@ -1,3 +1,7 @@
+body{
+    background-color: var(--cor-musgo);
+}
+
 .logo-area-cadastro {
     position: absolute;
     top: 30px;    

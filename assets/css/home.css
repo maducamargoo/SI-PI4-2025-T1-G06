@@ -1,3 +1,7 @@
+body{
+  background-color: var(--cor-fundo);
+}
+
 #home{
     display: flex;
     align-items: stretch;

@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Menu</title>
-<link rel="stylesheet" href="assets/css/menu.css">
+    <meta charset="UTF-8">
+    <title>RimaJam - Menu</title>
+    <link rel="stylesheet" href="../assets/css/menu.css">
+
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
 </head>
 <body>
 
-    <img class="logo" src="assets/img/logo.png" alt="Logo">
+    <img class="logo" src="../assets/img/logo.png" alt="Logo">
 
     <button class="btn-sair" onclick="location.href='login.html'">Sair</button>
 
     <div class="center-area">
-        <div class="livro">
-            <img src="assets/img/minigame-rima-descricao.png" alt="Livro">
+        <div id="livroContainer" class="livro">
 
-            <button class="btn-comecar">Começar!</button>
+            <img id="livroImg" src="../assets/img/menu/minigame-rima-descricao.png" alt="Livro">
 
-            <img class="seta" src="assets/img/seta.png" alt="Próximo">
+            <button id="btnRima" class="btn-comecar-rima">Começar!</button>
+
+            <button id="btnCartas" class="btn-comecar-cartas" style="display: none;">Começar!</button>
+
+            <img id="seta" class="seta" src="../assets/img/menu/seta-direita.png" alt="Próximo">
         </div>
     </div>
 
+    <script src="../assets/js/menu.js"></script>
 </body>
 </html>
