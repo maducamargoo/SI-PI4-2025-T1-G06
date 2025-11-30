@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/minigame-rima/fundo-palco.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    height: 100vh;
+}
+
+.tucana-frame {
+    width: 320px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tucana img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.balao {
+    margin-top: 10px;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: 3px solid #ff3a7a;
+    text-align: center;
+}
+
+.conteudo-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.verso-area {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: 3px solid #ffcb00;
+    width: 460px;
+    text-align: center;
+}
+
+.verso-linha {
+    font-size: 26px;
+    margin: 5px 0;
+}
+
+.opcoes {
+    display: flex;
+    gap: 18px;
+}
+
+.opcao {
+    background: #ff3a7a;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.opcao:hover {
+    background: #d72d66;
+}
+
+.feedback {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: 3px solid #ffcb00;
+    text-align: center;
+}
+
+.feedback img {
+    width: 20px;
+}
+
+.escondido {
+    display: none;
+}
+
+@keyframes entrada {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

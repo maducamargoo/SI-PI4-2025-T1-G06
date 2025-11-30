@@ -1,0 +1,66 @@
+{
+  "titulo": "Não Deixe a Música Parar",
+  "musica": "As Quatro Estações",
+  "rodadas": [
+    {
+      "verso1": "Na primavera o sol vem brilhar,",
+      "verso2": "flores lindas começam a _____",
+      "opcoes": ["Crescer", "Nascer", "Brotar"],
+      "correta": 2
+    },
+    {
+      "verso1": "As borboletas voam no ar,",
+      "verso2": "e os passarinhos vão _____",
+      "opcoes": ["Correr", "Dormir", "Cantar"],
+      "correta": 2
+    },
+    {
+      "verso1": "Chega o verão, com tanto calor,",
+      "verso2": "é tempo de praia e muito _____",
+      "opcoes": ["Vento", "Choro", "Sabor"],
+      "correta": 2
+    },
+    {
+      "verso1": "Sorvete gelado pra refrescar,",
+      "verso2": "e o céu azul pra _____",
+      "opcoes": ["Brincadeiras", "Diversão", "Aproveitar"],
+      "correta": 2
+    },
+    {
+      "verso1": "No outono, o vento a soprar,",
+      "verso2": "as folhas dançam sem _____",
+      "opcoes": ["Cair", "Sumir", "Parar"],
+      "correta": 2
+    },
+    {
+      "verso1": "Cores douradas vão se espalhar,",
+      "verso2": "e o frio começa a _____",
+      "opcoes": ["Aparecer", "Surgir", "Chegar"],
+      "correta": 2
+    },
+    {
+      "verso1": "No inverno, o frio é maior,",
+      "verso2": "casaco quentinho é o _____",
+      "opcoes": ["Chato", "Legal", "Melhor"],
+      "correta": 2
+    },
+    {
+      "verso1": "O chocolate vem pra adoçar,",
+      "verso2": "e o coração pra se _____",
+      "opcoes": ["Aquecer", "Encolher", "Esquentar"],
+      "correta": 2
+    },
+    {
+      "verso1": "As quatro juntas vêm ensinar,",
+      "verso2": "que o tempo sempre vai _____",
+      "opcoes": ["Mexer", "Permanecer", "Mudar"],
+      "correta": 2
+    },
+    {
+      "verso1": "Cada estação tem seu lugar,",
+      "verso2": "e é bonito o ano _____!",
+      "opcoes": ["Concluir", "Mover", "Girar"],
+      "correta": 2
+    }
+  ]
+}
