@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Não Deixe a Música Parar</title>
+    <link rel="stylesheet" th:href="@{/css/minigame-rima.css}">
+</head>
+<body>
+
+<div class="fumaca"></div>
+<div class="luz-palco"></div>
+
+<div class="container">
+
+    <div class="tucana">
+        <div class="tucana-frame">
+            <img id="tucana-img" th:src="@{/img/minigame-rima/tucana.png}" alt="Tucana Cantora">
+        </div>
+        <div id="balao" class="balao">
+            Vamos cantar!
+        </div>
+    </div>
+
+    <div class="conteudo-direita">
+        
+        <div class="verso-area">
+            <p class="verso-linha"></p>
+            <p class="verso-linha"></p>
+        </div>
+
+        <div class="opcoes">
+            <button class="opcao">---</button>
+            <button class="opcao">---</button>
+            <button class="opcao">---</button>
+        </div>
+
+    </div>
+
+    <div id="feedback" class="feedback escondido">
+        <img id="feedback-img" src="">
+        <p id="feedback-text"></p>
+    </div>
+
+</div>
+
+<script th:src="@{/js/minigame-rima.js}"></script>
+</body>
+</html>

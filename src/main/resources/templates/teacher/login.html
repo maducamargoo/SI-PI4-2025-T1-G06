@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RimaJam - Login</title>
+
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <link rel="icon" type="image/png" th:href="@{/img/logo.png}">
+</head>
+
+<body>
+<div class="container">
+    <div class="login-card">
+
+        <div class="card-image">
+            <img th:src="@{\img\banner\professora-livro.jpg}" alt="Professora ensinando crianças na sala de aula">
+        </div>
+
+        <div class="card-form">
+
+            <div class="logo-area">
+                
+                <a th:href="@{/}">
+                    <img th:src="@{/img/logo.png}" alt="Logo RimaJam">
+                </a>
+            </div>
+
+            <h2>Login</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigo">Código de acesso</label>
+                    <input type="password" id="codigo" name="codigo" required>
+                </div>
+
+                <div class="link-group">
+                    <!-- Rota para o cadastro -->
+                    <a th:href="@{/teacher/cadastro}" class="register-link">Não sou cadastrado</a>
+                </div>
+
+                <button type="button" class="login-button" id="btnLogin">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    document.getElementById('btnLogin').addEventListener('click', async function () {
+
+        const usuario = document.getElementById("usuario").value;
+        const senha = document.getElementById("codigo").value;
+
+        if (!usuario || !senha) {
+            alert("Preencha todos os campos!");
+            return;
+        }
+
+        try {
+            const response = await fetch("/professor/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    usuarioEscola: usuario,
+                    senha: senha
+                })
+            });
+
+            const data = await response.json();
+
+            if (data && data.id) {
+                alert("Login realizado com sucesso!");
+                window.location.href = "/teacher/menu";
+            } else {
+                alert("Usuário ou código inválidos!");
+            }
+
+        } catch (e) {
+            alert("Erro ao conectar ao servidor.");
+            console.log(e);
+        }
+    });
+</script>
+
+</body>
+</html>

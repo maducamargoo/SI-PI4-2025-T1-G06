@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Tucana — Introdução</title>
+    <link rel="stylesheet" th:href="@{/css/minigame-rima-intro.css}">
+</head>
+<body>
+
+<div class="intro-container">
+
+    <div class="tucana-area">
+        <img class="tucana-img" th:src="@{/img/minigame-rima/tucana-vergonha.png}" alt="Ana Tucana">
+
+        <div class="balao-intro">
+            Oi amiguinhos, sou a Ana Tucana!
+            Eu esqueci a letra da minha música no show!  
+            Me ajuda a completar os versos pra eu arrasar de novo?
+        </div>
+    </div>
+
+    <button class="btn-comecar" onclick="iniciarJogo()">COMEÇAR</button>
+
+</div>
+
+<script>
+function iniciarJogo() {
+    // Alterado para rota do servidor (sem .html)
+    window.location.href = "/minigame-rima";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Definições iniciais */
+:root {
+    --cor-primaria: #2b3a9a; /* Azul escuro */
+    --cor-secundaria: #5a5a5a; /* Cinza */
+    --cor-destaque: #00b894; /* Verde Água/Ciano (Para seleção) */
+    --cor-destaque-hover: #1e87f0; /* Um azul mais claro para o hover */
+    --cor-fundo-claro: #f4f7ff; /* Fundo geral claro */
+}
+
+/* Estilo para o título da seção */
+.plan-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* 1. Layout Principal - Coloca os planos lado a lado (FLEXBOX) */
+#plans.plan-options-container {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 30px; /* Espaçamento entre os cartões */
+    padding: 20px 0;
+    margin-bottom: 70px; /* Espaço para o tooltip */
+    position: relative; 
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+/* 2. Estilo Básico do Cartão */
+.plan-option {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    max-width: 320px; 
+    cursor: pointer;
+    position: relative;
+    /* Adiciona uma transição para a propriedade 'transform' */
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* 3. Esconde o radio button nativo */
+.plan-option input[type="radio"] {
+    position: absolute;
+    opacity: 0; 
+    pointer-events: none;
+}
+
+/* 4. Estilo da Caixa do Plano (plan-box) - O cartão visual */
+.plan-box {
+    background-color: #ffffff; 
+    border: 2px solid #ddd; 
+    border-radius: 12px;
+    padding: 30px 20px;
+    transition: all 0.3s ease; /* Transições suaves para todas as mudanças de estilo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px; 
+}
+
+/* 🚀 EFEITO DE HOVER: Aumenta e muda a cor da borda (Volta ao normal automaticamente) */
+.plan-option:hover .plan-box {
+    transform: scale(1.05); /* Aumento no tamanho */
+    border-color: var(--cor-destaque-hover); /* Borda colorida */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+/* Estilo do título e preço */
+.plan-box h4 {
+    font-size: 1.6em;
+    color: var(--cor-primaria);
+    margin: 0 0 8px 0;
+}
+
+.plan-box .price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #333;
+}
+
+/* 5. Estilo de Destaque quando o plano está SELECIONADO */
+.plan-option input[type="radio"]:checked + .plan-box {
+    border-color: var(--cor-destaque); 
+    background-color: var(--cor-fundo-claro); 
+    transform: translateY(-5px); /* Elevação ao ser selecionado */
+    box-shadow: 0 12px 25px rgba(0, 184, 148, 0.4); 
+}
+
+.plan-option input[type="radio"]:checked + .plan-box h4 {
+    color: var(--cor-destaque);
+}
+
+/* Estilo da Mensagem do Plano (Tooltip) - Inicialmente escondida */
+.plan-info {
+    position: absolute;
+    bottom: -60px; /* Começa abaixo */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: var(--cor-destaque-hover); 
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    width: 90%; 
+    max-width: 300px;
+    text-align: center;
+    z-index: 10;
+    
+    opacity: 0;
+    visibility: hidden;
+    /* Transição para que a legenda apareça e desapareça suavemente */
+    transition: opacity 0.3s, bottom 0.3s, visibility 0.3s;
+}
+
+/* Cria o triângulo do tooltip */
+.plan-info::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--cor-destaque-hover); 
+}
+
+
+/* 🚀 EFEITO DE HOVER: Mostra a mensagem ao passar o mouse (Volta ao normal automaticamente) */
+.plan-option:hover .plan-info {
+    opacity: 1;
+    visibility: visible;
+    bottom: -45px; /* Sobe para o efeito de transição */
+}
+
+/* Mantém o estilo da mensagem para quando estiver SELECIONADO */
+.plan-option input[type="radio"]:checked ~ .plan-info {
+    opacity: 1;
+    visibility: visible;
+    bottom: -45px;
+    background-color: var(--cor-destaque); 
+}
+
+.plan-option input[type="radio"]:checked ~ .plan-info::before {
+    border-bottom: 8px solid var(--cor-destaque);
+}

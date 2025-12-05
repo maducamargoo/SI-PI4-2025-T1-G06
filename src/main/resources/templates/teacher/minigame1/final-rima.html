@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fim do Jogo - Não Deixe a Música Parar</title>
+    <link rel="stylesheet" th:href="@{/css/final-rima.css}">
+</head>
+<body>
+
+<div class="container-final">
+
+    <div class="tucana-final">
+        <img id="tucana-final-img" th:src="@{/img/minigame-rima/tucana.png}" alt="Tucana Final">
+    </div>
+
+    <div class="resultado-box">
+        <h1 id="titulo-final">Parabéns!</h1>
+
+        <p id="mensagem-final">
+            Você arrasou no show!
+        </p>
+
+        <p class="pontuacao">
+            Pontuação final: <span id="pontos-finais">0</span> / <span id="total-rodadas">0</span>
+        </p>
+
+        <button class="btn-icone" id="btn-repetir">
+            <img th:src="@{/img/minigame-rima/replay.png}" alt="Repetir">
+        </button>
+
+        <button class="btn-icone" id="btn-finalizar">
+            <img th:src="@{/img/minigame-rima/home.png}" alt="Home">
+        </button>
+ 
+    </div>
+
+</div>
+
+<script th:src="@{/js/final-rima.js}"></script>
+</body>
+</html>

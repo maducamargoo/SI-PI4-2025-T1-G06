@@ -1,0 +1,63 @@
+body{
+  background-color: var(--cor-fundo);
+}
+
+#home{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: calc(100vh - 150px); 
+    padding: 120px 5% 60px;
+    gap: 15px; 
+}
+
+#cta {
+    color: white;
+    flex: 7;
+    border-radius: 20px;
+    background-color: var(--cor-sea);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding: 40px;
+}
+  
+#cta_banner {
+    flex: 3; /* 30% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+#cta_banner img {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+  
+.grifa{
+    background-color: var(--cor-tangerine);
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+
+.btn-signin {
+    align-self: center;
+    background-color: var(--cor-blush);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+  
+.btn-signin:hover,.btn-login:hover {
+    transform: scale(1.05);
+    background-color: #c85070; 
+}

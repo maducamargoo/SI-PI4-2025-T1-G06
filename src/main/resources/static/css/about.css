@@ -1,0 +1,70 @@
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 5% 80px;
+  }
+  
+#about_img {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+#about_img img {
+    max-width: 600px;   
+    height: auto;       
+    max-height: 480px;  
+    object-fit: cover;
+    border-radius: 20px;
+}
+  
+.about_text {
+  flex: 1; 
+  color: var(--cor-preto);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li{
+  margin-top: 30px;
+}
+
+.text_matcha{
+  color: var(--cor-matcha);
+}
+
+.text_tangerine{
+  color: var(--cor-tangerine);
+}
+
+
+.grifa_blush, .grifa_matcha, .grifa_sea, .grifa_tangerine {
+  border-radius: 5px;
+  padding: 1px 5px;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  font-style: oblique;
+}
+
+.grifa_sea{
+  background-color: var(--cor-sea);
+}
+
+.grifa_tangerine{
+  background-color: var(--cor-tangerine);
+}
+
+.grifa_blush{
+  background-color: var(--cor-blush);
+}
+
+.grifa_matcha{
+  background-color: var(--cor-matcha);
+}
